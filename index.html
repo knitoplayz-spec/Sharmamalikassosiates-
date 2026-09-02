@@ -1,0 +1,308 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharma & Malik Associates | Premium Law Firm in Narela</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1b2a4a',
+                            900: '#0f172a',
+                        },
+                        gold: {
+                            400: '#e5c158',
+                            500: '#d4af37',
+                            600: '#b89628',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 10px rgba(212, 175, 55, 0.2)' },
+                            '100%': { boxShadow: '0 0 25px rgba(212, 175, 55, 0.6)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fce074 0%, #d4af37 50%, #997819 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #d4af37 0%, #b89628 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-navy-900 text-slate-300 text-sm py-2 px-4 sm:px-8 border-b border-slate-800/80 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-xs sm:text-sm">
+                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4 text-gold-500 animate-bounce"></i> Gonda Road, Swatantra Nagar, Narela</span>
+                <span id="status-badge" class="hidden md:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-semibold"></span>
+            </div>
+            <div class="flex items-center gap-4 text-xs sm:text-sm">
+                <a href="tel:+918527939362" class="flex items-center gap-1.5 hover:text-gold-400 transition-all transform hover:scale-105">
+                    <i data-lucide="phone" class="w-4 h-4 text-gold-500"></i> +91 85279 39362
+                </a>
+                <a href="#about" class="flex items-center gap-1 bg-amber-500/15 text-amber-300 px-2.5 py-0.5 rounded-full border border-amber-500/30 font-medium hover:border-amber-400 transition-colors">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i> 4.8 (34 Reviews)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100 z-40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <div class="bg-navy-900 text-gold-500 p-2.5 rounded-xl shadow-md group-hover:rotate-6 transition-transform duration-300">
+                    <i data-lucide="scale" class="w-7 h-7"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-navy-900 group-hover:text-gold-600 transition-colors">Sharma & Malik</h1>
+                    <p class="text-[10px] sm:text-xs text-gold-600 font-bold tracking-widest uppercase">Associates • Advocates & Legal Consultants</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-700">
+                <a href="#about" class="hover:text-gold-600 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-500 hover:after:w-full after:transition-all">About</a>
+                <a href="#services" class="hover:text-gold-600 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-500 hover:after:w-full after:transition-all">Practice Areas</a>
+                <a href="#hours" class="hover:text-gold-600 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-500 hover:after:w-full after:transition-all">Schedule</a>
+                <a href="#contact" class="hover:text-gold-600 transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-500 hover:after:w-full after:transition-all">Contact</a>
+            </nav>
+
+            <a href="tel:+918527939362" class="bg-navy-900 text-gold-400 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
+                <i data-lucide="phone-call" class="w-4 h-4"></i>
+                <span>Call Now</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Animated Hero Section -->
+    <section class="relative bg-navy-900 text-white py-24 px-4 sm:px-8 overflow-hidden">
+        <!-- Background Decorative Orbs -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 -right-24 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Hero Content -->
+            <div class="md:col-span-7 space-y-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs sm:text-sm font-semibold tracking-wide">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-gold-400"></i> Top Rated Law Office in Narela Sector
+                </div>
+                
+                <h2 class="text-4xl sm:text-6xl font-black leading-tight tracking-tight text-white">
+                    Trusted Advocates & <br><span class="gold-gradient-text">Legal Guidance</span>
+                </h2>
+                
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
+                    Sharma & Malik Associates provides steadfast legal advice, consulting, and advocacy on Gonda Road, Swatantra Nagar. Dedicated to delivering reliable, client-centered representation.
+                </p>
+
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#contact" class="gold-gradient-bg text-navy-900 hover:opacity-95 font-extrabold px-7 py-4 rounded-xl transition-all shadow-lg hover:shadow-gold-500/20 flex items-center gap-2.5 transform hover:-translate-y-1">
+                        <span>Schedule Consultation</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="tel:+918527939362" class="border border-slate-700 hover:bg-slate-800/80 backdrop-blur text-slate-200 font-bold px-6 py-4 rounded-xl transition-all flex items-center gap-2 hover:-translate-y-1">
+                        <i data-lucide="phone" class="w-5 h-5 text-gold-500"></i>
+                        <span>+91 85279 39362</span>
+                    </a>
+                </div>
+
+                <!-- Live Google Review Banner -->
+                <div class="pt-6 border-t border-slate-800 flex flex-wrap items-center gap-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 bg-slate-800/60 backdrop-blur px-4 py-3 rounded-xl border border-slate-700/60">
+                        <div class="flex text-amber-400 gap-0.5">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold text-white text-lg">4.8</span>
+                            <span class="text-xs text-slate-400 block font-medium">34 Verified Google Reviews</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-400 text-sm">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>98% Positive Client Feedback</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Hero Card with Floating Effect -->
+            <div class="md:col-span-5" data-aos="fade-left" data-aos-duration="1000">
+                <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-2xl relative animate-float">
+                    <div class="absolute -top-3 -right-3 gold-gradient-bg text-navy-900 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-md">
+                        Narela Advocate
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2.5">
+                        <i data-lucide="building-2" class="text-gold-500"></i> Office Overview
+                    </h3>
+                    
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex items-start gap-3 bg-slate-900/50 p-3 rounded-xl border border-slate-700/40">
+                            <i data-lucide="briefcase" class="w-5 h-5 text-gold-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block">Category</strong>
+                                <span>Law Firm & Legal Consulting</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-slate-900/50 p-3 rounded-xl border border-slate-700/40">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gold-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block">Address</strong>
+                                <span>Main Gonda Rd, Swatantra Nagar, Narela</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-slate-900/50 p-3 rounded-xl border border-slate-700/40">
+                            <i data-lucide="clock" class="w-5 h-5 text-gold-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block">Working Hours</strong>
+                                <span>Mon - Sat: 10:00 AM – 5:00 PM</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="w-full mt-6 bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition-all text-sm flex items-center justify-center gap-2 border border-slate-600">
+                        <i data-lucide="navigation" class="w-4 h-4 text-gold-400"></i> Visit & Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Highlights Section -->
+    <section id="about" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <span class="text-gold-600 font-extrabold text-xs tracking-widest uppercase">Reputation & Experience</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Why Local Clients Trust Us</h2>
+            <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                    <i data-lucide="star" class="w-7 h-7 fill-current"></i>
+                </div>
+                <h3 class="text-xl font-bold text-navy-900 mb-3">4.8-Star Community Trust</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Backed by 34 verified reviews on Google Maps. Local residents consistently highlight our reliable support, accessibility, and clear counsel.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-navy-900/10 text-navy-900 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-navy-900 group-hover:text-gold-400 transition-all duration-300">
+                    <i data-lucide="gavel" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-navy-900 mb-3">Professional Legal Advocacy</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Operating as a standard law firm in Narela sector, providing high-standard advocacy, case consulting, legal notices, and documentation.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-14 h-14 bg-emerald-500/10 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+                    <i data-lucide="bus" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-navy-900 mb-3">Accessible Location</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Located along the main Gonda Road in Swatantra Nagar, smoothly connected via neighborhood bus lines and local transit networks.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Schedule & Hours -->
+    <section id="hours" class="bg-slate-100 py-20 px-4 sm:px-8 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            
+            <div class="md:col-span-6" data-aos="fade-right">
+                <span class="text-gold-600 font-extrabold text-xs tracking-widest uppercase">Weekly Timings</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2 mb-4">6-Day Operational Schedule</h2>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    We maintain an accessible schedule six days a week for consultations, legal hearings, document drafts, and case discussions.
+                </p>
+
+                <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+                    <div class="p-4 bg-navy-900 text-white font-bold flex justify-between items-center text-sm">
+                        <span>Day of the Week</span>
+                        <span>Working Hours</span>
+                    </div>
+                    <ul class="divide-y divide-slate-100 text-sm">
+                        <li class="p-4 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800">Monday – Saturday</span>
+                            <span class="text-emerald-700 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                                10:00 AM – 5:00 PM
+                            </span>
+                        </li>
+                        <li class="p-4 flex justify-between items-center bg-slate-50">
+                            <span class="font-semibold text-slate-500">Sunday</span>
+                            <span class="text-rose-600 font-bold bg-rose-50 px-3 py-1 rounded-full border border-rose-200 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-rose-500"></span> Closed
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 space-y-6" data-aos="fade-left">
+                <!-- Location Info Card -->
+                <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:border-gold-500 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-navy-900 text-gold-400 rounded-xl">
+                            <i data-lucide="map-pin-line" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-navy-900 mb-1">Office Location</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Sharma & Malik Associates Main, Gonda Rd, Swatantra Nagar, Narela, Delhi, 110040.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call Card -->
+                <div class="bg-gradient-to-br from-navy-900 to-slate-800 p-7 rounded-2xl shadow-lg text-white">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gold-400 font-bold uppercase tracking-wider">Direct Assistance</span>
+                            <h3 class="text-xl font-bold text-white mt-1">Need Immediate Counsel?</h3>
+                            <p class="text-slate-300 text-sm mt-1">Call directly for inquiries or to confirm lawyer availa
